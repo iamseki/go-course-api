@@ -13,16 +13,11 @@ const (
 	collectionName string = "posts"
 )
 
-type PostRepository interface {
-	Save(post *entity.Post) (*entity.Post, error)
-	FindAll() ([]entity.Post, error)
-}
-
 type repo struct {
 }
 
 // NewPostRepository
-func NewPostRepository() PostRepository {
+func NewFirestorePostRepository() PostRepository {
 	return &repo{}
 }
 
