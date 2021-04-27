@@ -25,6 +25,10 @@ func (mock *MockRepository) FindAll() ([]entity.Post, error) {
 	return result.([]entity.Post), args.Error(1)
 }
 
+func (mock *MockRepository) Delete(*entity.Post) error {
+	return nil
+}
+
 func TestCreate(t *testing.T) {
 	mockRepo := &MockRepository{}
 	post := entity.Post{ID: 1, Title: "A", Text: "B"}

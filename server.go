@@ -10,7 +10,8 @@ import (
 func main() {
 	const port string = ":8080"
 
-	postRepository := repository.NewFirestorePostRepository()
+	// postRepository := repository.NewFirestorePostRepository()
+	postRepository := repository.NewSQLiteRepository()
 	postService := service.NewPostService(postRepository)
 	postController := controller.NewPostController(postService)
 

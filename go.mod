@@ -7,5 +7,6 @@ require (
 	github.com/go-chi/chi v1.5.4
 	github.com/go-playground/assert/v2 v2.0.1
 	github.com/gorilla/mux v1.8.0
+	github.com/mattn/go-sqlite3 v1.14.7
 	github.com/stretchr/testify v1.5.1
 )
